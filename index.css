@@ -1,103 +1,227 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 
-*{
-    background-color: #1a1b26;
-    color: #d5d6db;
-    font-family: 'Ubuntu', sans-serif;
+* {
+  font-family: "ubuntu", sans-serif;
 }
 
 .haiku {
-    text-align: center;
+  text-align: center;
+  font-style: italic;
 }
 
 body {
-margin: 0;
+  margin: 0;
+  background-image: url("daniel-leone-v7daTKlZzaw-unsplash.jpg");
+  background-size: cover;
+  background-position: top;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  margin-top: 5px;
+  font-size: 12pt;
+}
+
+.background-card {
+  background-color: #f9fafb87;
+  width: 50%;
+  border-radius: 10px;
+  margin-bottom: 70px;
+  padding: 50px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.052);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(3px);
 }
 
 h1 {
-    text-align: center;
-    background-color: inherit;
+  text-align: center;
+  background-color: #00000000;
+  margin: 0 auto 0 0;
 }
 
 h2 {
-    text-align: center;
+  margin-top: 0.75em;
+  text-align: center;
+  margin-bottom: 0.33em;
 }
 
-a {
-    color: #f7768e;
-    background-color: #8c4351;
-    padding: 3px;
-    border-radius: 4px;
-    text-decoration: none;
+.author {
+  color: #f7768e;
+  background-color: #8c4351;
+  padding: 3px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: small;
 }
 
-a:hover {
-    color: #2ac3de;
-    background-color: #0F5662;
-    text-decoration: underline;
-    transition: background-color 0.4s ease, color 0.4s ease;
-    
-
+.author:hover {
+  color: #2ac3de;
+  background-color: #0f5662;
+  text-decoration: underline;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-.list{
-    background-color: #24283b;
-    padding: 10px;
-    border-radius: 8px;
-    padding-left: 20px;
-    max-width: 50%;
-    margin: 0 auto;
-    box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.976);
+.list {
+  background-color: #edeff1;
+  padding: 10px;
+  border-radius: 8px;
+  padding-left: 20px;
+  width: 350px;
+  height: 180px;
+  margin: 20px 20px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.052);
 }
 
 li {
-    margin: 10px;
-    background-color: inherit;
+  margin: 10px;
+  background-color: inherit;
 }
 
 b {
-    background-color: inherit;
+  background-color: inherit;
 }
 
-.image-container {
-text-align: center;
+.list-container {
+  flex-direction: row;
+  display: flex;
 }
 
-img{
-    border-radius: 10px;
-    margin-top: 10px;
+.list-package {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.math {
+  background-color: #12a8c24f;
+}
+
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+img {
+  border-radius: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.236);
+  transform: rotate(0deg);
+  transition: transform 2s; /* Optional: Add a smooth transition effect */
+
+  /* Apply the animation */
+  animation: rotateAnimation 50s linear infinite;
 }
 
 .text-container {
-    margin: 0 auto;
-    max-width: 450px;
+  margin: 0 auto;
+  max-width: 450px;
 }
 
 table {
-    margin: 0 auto;
-    border-width: 2px;
-    border-color: #1a1b26;
+  margin-top: 50px;
+  border-width: 2px;
+  border-color: #6a6a6a;
+  border-collapse: collapse;
+  border-style: solid;
+  table-layout: fixed;
+  width: 700px;
+  background-color: #edeff1ab;
 }
 
-th{
-    border: 1px solid #dddddd;
+.github {
+  fill: white;
+  height: 30px;
+  width: 30px;
+}
+.icon {
+  fill: white;
+  height: 30px;
+  width: 30px;
+  margin-top: 5px;
+  margin-left: 30px;
+}
+
+.full-screen {
+  fill: white;
+  height: 20px;
+  width: 20px;
+  margin-top: 5px;
+  margin-left: 50px;
+  margin-right: 20px;
+}
+
+.full-screen:hover {
+    cursor: pointer;
+}
+.exit-full-screen:hover {
+    cursor: pointer;
+}
+
+.exit-full-screen {
+    display: none;
+    fill: white;
+    height: 20px;
+    width: 20px;
+    margin-top: 5px;
+    margin-left: 50px;
+    margin-right: 20px;
+}
+
+.github-link {
+  margin: 8px auto 0 30px;
+}
+
+.caption {
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 16pt;
+}
+
+th {
+  border: 1px solid #6a6a6a;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  background-color: #00000032;
 }
 tr {
-    border-bottom: 1px solid #dddddd; /* Add bottom border for rows */
+  border-bottom: 1px solid #6a6a6a; /* Add bottom border for rows */
 }
 td {
-    border: 1px solid #dddddd; /* Add border for cells */
+  border: 1px solid #6a6a6a; /* Add border for cells */
+  padding: 5px;
 }
 
 header {
-    position: sticky;
-    background-color: #24283b;
-    top: 0;
-    height: 50px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 6px;
-    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.315);
+  display: flex;
+  flex-direction: row;
+  position: sticky;
+  top: 0;
+  text-decoration: underline;
+  color: #dddddd;
+  z-index: 1;
+  width: 100%;
+  background-color: #00000000;
+  height: fit-content;
+  font: 30pt;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  font-size: 30pt;
+  align-items: center;
+  justify-content: center;
+
+  /* box-shadow: 0 0 0 0 #000000; */
 }
